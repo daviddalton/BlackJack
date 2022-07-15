@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OwWXuHz9+iHeUCAJJ8/MhNdRo4WSdGO3oEF307Qy1r9EgBdIZ/J798SeY2ttCpgkS0TlITRJeX/869XynahQOw==",
+  "success": true,
+  "projectFilePath": "/Users/ddalton/dev/BlackJack/BlackJack/BlackJack.iOS/BlackJack.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/ddalton/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/ddalton/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/ddalton/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
