@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OwWXuHz9+iHeUCAJJ8/MhNdRo4WSdGO3oEF307Qy1r9EgBdIZ/J798SeY2ttCpgkS0TlITRJeX/869XynahQOw==",
+  "dgSpecHash": "Hw/Hh94QUTAZf2YRpdamLL68CrerR1dNGJv6Z2bfWw1/Wn6NPWJ5PMDJt5nwjgYzEw/9v0VSIAq11PRJ1OWxZw==",
   "success": true,
   "projectFilePath": "/Users/ddalton/dev/BlackJack/BlackJack/BlackJack.iOS/BlackJack.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,5 +8,32 @@
     "/Users/ddalton/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
     "/Users/ddalton/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.7.0. Reference the package directly from the project to select a different version. \n BlackJack.iOS -> BlackJack -> Xamarin.Essentials (>= 1.7.3) \n BlackJack.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2478 to 5.0.0.2196. Reference the package directly from the project to select a different version. \n BlackJack.iOS -> BlackJack -> Xamarin.Forms (>= 5.0.0.2478) \n BlackJack.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

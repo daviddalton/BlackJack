@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gX5FqsQUtSjYl3axtG4s59jA8Hy0C0XpJaJiUR6Z4xddIFo1F2W+A8UW+GynVpF8Y7AOIOR+usnWxoqfUF8Qog==",
+  "dgSpecHash": "RLoIw6kCb07p1qyGAFmncyt+CP4Gbt2ngKRiRsa5tJcSRn8zo5pth4RtdzQ8WkAPNtO0VpeX5HQjz6TjTLb50g==",
   "success": true,
   "projectFilePath": "/Users/ddalton/dev/BlackJack/BlackJack/BlackJack.Android/BlackJack.Android.csproj",
   "expectedPackageFiles": [
@@ -58,8 +58,8 @@
     "/Users/ddalton/.nuget/packages/xamarin.androidx.versionedparcelable/1.1.1.8/xamarin.androidx.versionedparcelable.1.1.1.8.nupkg.sha512",
     "/Users/ddalton/.nuget/packages/xamarin.androidx.viewpager/1.0.0.8/xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "/Users/ddalton/.nuget/packages/xamarin.androidx.viewpager2/1.0.0.10/xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
-    "/Users/ddalton/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
-    "/Users/ddalton/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "/Users/ddalton/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
+    "/Users/ddalton/.nuget/packages/xamarin.forms/5.0.0.2478/xamarin.forms.5.0.0.2478.nupkg.sha512",
     "/Users/ddalton/.nuget/packages/xamarin.google.android.material/1.4.0.2/xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "/Users/ddalton/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
