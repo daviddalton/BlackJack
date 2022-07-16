@@ -3,54 +3,50 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BlackJack.MainPage">
     
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Black Jack!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Dealer: "></Span>
-                        <Span Text="{Binding DealerScore}"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="You: "></Span>
-                        <Span Text="{Binding PlayerCards}"></Span>
-                        <Span Text=" = "></Span>
-                        <Span Text="{Binding PlayerScore}"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="{Binding PlayerStatus}"></Span>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Button Text="Hit!" Command="{Binding HitCommand}" BackgroundColor="Gray" TextColor="White"></Button>
-        <Button Text="Stay" Clicked="Stay_Clicked" BackgroundColor="Gray" TextColor="White"></Button>
-        <Button Text="Reset" Command="{Binding ResetCommand}"></Button>
-        <Label FontSize="36" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="GAME OVER: "></Span>
-                        <Span Text="{Binding GameOver}"></Span>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout Orientation="Vertical" VerticalOptions="Start">
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Black Jack!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label FontSize="36" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="{Binding PlayerStatus}"></Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="24" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Dealer: "></Span>
+                            <Span Text="{Binding DealerScore}"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label FontSize="24" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="You: "></Span>
+                            <Span Text="{Binding PlayerCards}"></Span>
+                            <Span Text=" = "></Span>
+                            <Span Text="{Binding PlayerScore}"/>
+                            <Span Text="/"></Span>
+                            <Span Text="{Binding PlayerAlternateScore}"></Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="32, 64, 32, 32">
+            <Button Text="Hit!" Command="{Binding HitCommand}" BackgroundColor="Gray" TextColor="White"></Button>
+            <Button Text="Stay" BackgroundColor="Gray" TextColor="White"></Button>
+            <Button Text="Reset" Command="{Binding ResetCommand}"></Button>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
