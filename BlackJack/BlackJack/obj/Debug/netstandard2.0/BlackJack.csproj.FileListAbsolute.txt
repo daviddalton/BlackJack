@@ -1,0 +1,14 @@
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/bin/Debug/netstandard2.0/BlackJack.deps.json
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/bin/Debug/netstandard2.0/BlackJack.dll
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/bin/Debug/netstandard2.0/ref/BlackJack.dll
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/bin/Debug/netstandard2.0/BlackJack.pdb
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.csproj.AssemblyReference.cache
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.AssemblyInfoInputs.cache
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.AssemblyInfo.cs
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.csproj.CoreCompileInputs.cache
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.dll
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/ref/BlackJack.dll
+/Users/ddalton/dev/BlackJack/BlackJack/BlackJack/obj/Debug/netstandard2.0/BlackJack.pdb

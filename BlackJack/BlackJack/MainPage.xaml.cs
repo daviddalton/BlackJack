@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace BlackJack
@@ -13,6 +8,17 @@ namespace BlackJack
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainPageViewModel();
+        }
+
+        void Hit_Clicked(Object sender, EventArgs e)
+        {
+            Console.WriteLine("Hit!");
+        }
+        
+        void Stay_Clicked(Object sender, EventArgs e)
+        {
+            Console.WriteLine("Stay...");
         }
     }
 }

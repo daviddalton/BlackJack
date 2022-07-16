@@ -1,6 +1,37 @@
 ﻿<Properties StartupConfiguration="{0AD2F79E-5E54-45A0-9DB0-37E94B04D071}|Default">
-  <MonoDevelop.Ide.ItemProperties.BlackJack FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.BlackJack.Android FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BlackJack.Android PreferredExecutionTarget="Android.Pixel_4_API_30" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJack/BlackJack/MainPage.xaml.cs">
+    <Files>
+      <File FileName="BlackJack/BlackJack/MainPage.xaml" Line="18" Column="35" />
+      <File FileName="BlackJack/BlackJack/App.xaml.cs" Line="2" Column="1" />
+      <File FileName="BlackJack/BlackJack/App.xaml" Line="1" Column="1" />
+      <File FileName="../../.nuget/packages/xamarin.essentials/1.7.3/readme.txt" Line="1" Column="1" />
+      <File FileName="BlackJack/BlackJack/MainPage.xaml.cs" Line="1" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlackJack" expanded="True">
+            <Node name="BlackJack" expanded="True">
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="BlackJack.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_30" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BlackJack.iOS FirstBuild="True" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="12.3.3.3" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BlackJack.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.24F4222A-54AF-4468-A5E3-FE15756387ED" />
 </Properties>
