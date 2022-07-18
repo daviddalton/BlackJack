@@ -12,7 +12,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="{Binding GameStatus}"></Span>
+                            <Span Text="{Binding Game.Status}"></Span>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>

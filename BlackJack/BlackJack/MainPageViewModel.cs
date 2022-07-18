@@ -13,10 +13,9 @@ namespace BlackJack
     {
         public event PropertyChangedEventHandler PropertyChanged;
         
+        public Game Game { get; set; }
         public Dealer Dealer { get; set; }
         public Player Player { get; set; }
-        public string GameStatus { get; set; } = "Playing...";
-        public bool GameOver { get; set; } = false;
 
         private readonly List<Card> _cards = new List<Card>();
 
@@ -28,6 +27,7 @@ namespace BlackJack
             SetUpCards();
             Player = SetUpPlayer();
             Dealer = SetUpDealer();
+            Game = SetUpGame();
             StartGameCommand_Execute();
         }
         
@@ -133,12 +133,16 @@ namespace BlackJack
             return new Player(0, "", 0);
         }
 
+        private Game SetUpGame()
+        {
+            return new Game("Playing...");
+        }
+
         private void ResetUI()
         {
             Player = SetUpPlayer();
             Dealer = SetUpDealer();
-            GameStatus = "Playing...";
-            GameOver = false;
+            Game = SetUpGame();
 
             StartGameCommand_Execute();
         }
@@ -182,28 +186,24 @@ namespace BlackJack
 
         private void NotifyOfChangesToGameUI()
         {
-            OnPropertyChanged(nameof(GameOver));
-            OnPropertyChanged(nameof(GameStatus));
+            OnPropertyChanged(nameof(Game));
             OnPropertyChanged(nameof(Player));
             OnPropertyChanged(nameof(Dealer));
         }
 
         private void Bust()
         {
-            GameStatus = "BUST!";
-            GameOver = true;
+            Game.Status = "BUST!";
         }
 
         private void BlackJack()
         {
-            GameStatus = "BLACKJACK!";
-            GameOver = true;
+            Game.Status = "BLACKJACK!";
         }
 
         private void DealerWins()
         {
-            GameStatus = "DEALER WINS!";
-            GameOver = true;
+            Game.Status = "DEALER WINS!";
         }
 
         private void DealerPlay()
