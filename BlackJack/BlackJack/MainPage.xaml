@@ -12,7 +12,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="{Binding PlayerStatus}"></Span>
+                            <Span Text="{Binding GameStatus}"></Span>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
@@ -22,7 +22,11 @@
                     <FormattedString>
                         <FormattedString.Spans>
                             <Span Text="Dealer: "></Span>
-                            <Span Text="{Binding DealerScore}"/>
+                            <Span Text="{Binding Dealer.Cards}"/>
+                            <Span Text=" = "></Span>
+                            <Span Text="{Binding Dealer.Score}"/>
+                            <Span Text="/"></Span>
+                            <Span Text="{Binding Dealer.AlternateScore}"></Span>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
@@ -32,11 +36,11 @@
                     <FormattedString>
                         <FormattedString.Spans>
                             <Span Text="You: "></Span>
-                            <Span Text="{Binding PlayerCards}"></Span>
+                            <Span Text="{Binding Player.Cards}"></Span>
                             <Span Text=" = "></Span>
-                            <Span Text="{Binding PlayerScore}"/>
+                            <Span Text="{Binding Player.Score}"/>
                             <Span Text="/"></Span>
-                            <Span Text="{Binding PlayerAlternateScore}"></Span>
+                            <Span Text="{Binding Player.AlternateScore}"></Span>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>

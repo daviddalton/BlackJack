@@ -1404,7 +1404,7 @@ application_config:
 
 	.type	.L.autostr.6, @object
 .L.autostr.6:
-	.asciz	"95dd768f-8f21-424f-bf5e-63ee067ac2f5"
+	.asciz	"80fd30de-80d4-4ee6-9a24-b7b6d2e85d70"
 	.size	.L.autostr.6, 37
 
 	.type	.L.autostr.7, @object

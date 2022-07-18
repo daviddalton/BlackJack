@@ -13,29 +13,66 @@ namespace BlackJack
     {
         public event PropertyChangedEventHandler PropertyChanged;
         
-        public int ChipCount { get; set; }
-        
-        public int DealerScore { get; set; }
-        public int PlayerScore { get; set; }
-        public int PlayerAlternateScore { get; set; } = 0;
-        public string PlayerCards { get; set; } = "";
-        public string PlayerStatus { get; set; } = "Playing...";
+        public Dealer Dealer { get; set; }
+        public Player Player { get; set; }
+        public string GameStatus { get; set; } = "Playing...";
         public bool GameOver { get; set; } = false;
 
         private readonly List<Card> _cards = new List<Card>();
 
         public MainPageViewModel()
         {
-            HitCommand = new Command(ChangeTextCommand_Execute);
+            HitCommand = new Command(HitCommand_Execute);
             ResetCommand = new Command(ResetGameCommand_Execute);
+            StartGameCommand = new Command(StartGameCommand_Execute);
             SetUpCards();
+            Player = SetUpPlayer();
+            Dealer = SetUpDealer();
+            StartGameCommand_Execute();
         }
         
         public ICommand HitCommand { get; set; }
 
         public ICommand ResetCommand { get; set; }
+        
+        public ICommand StartGameCommand { get; set; }
 
-        void ChangeTextCommand_Execute()
+        void StartGameCommand_Execute()
+        {
+            DealCardsToPlayer();
+            DealCardsToDealer();
+
+            NotifyOfChangesToGameUI();
+        }
+
+        void DealCardsToDealer()
+        {
+            AddCardToDealer();
+            AddCardToDealer();
+        }
+
+        void AddCardToDealer()
+        {
+            var card = GetCard();
+            if (Dealer.Cards.Length > 0)
+            {
+                Dealer.Cards += " + " + card.Name;
+            }
+            else
+            {
+                Dealer.Cards += card.Name;
+            }
+
+            UpdateDealerScoreAndGameStatus(card);
+        }
+
+        void DealCardsToPlayer()
+        {
+            HitCommand_Execute();
+            HitCommand_Execute();
+        }
+
+        void HitCommand_Execute()
         {
             // TODO: Check if the card is an Ace - you can play it as either a 1 or 11
             var card = GetCard();
@@ -86,61 +123,95 @@ namespace BlackJack
             _cards.Add(new Card("Ace", 1, 11));
         }
 
+        private Dealer SetUpDealer()
+        {
+            return new Dealer(0, "", 0);
+        }
+
+        private Player SetUpPlayer()
+        {
+            return new Player(0, "", 0);
+        }
+
         private void ResetUI()
         {
-            PlayerScore = 0;
-            PlayerCards = "";
-            PlayerStatus = "Playing...";
-            PlayerAlternateScore = 0;
+            Player = SetUpPlayer();
+            Dealer = SetUpDealer();
+            GameStatus = "Playing...";
             GameOver = false;
+
+            StartGameCommand_Execute();
         }
 
         private void UpdatePlayerCards(Card card)
         {
-            if (PlayerCards.Length > 0)
+            if (Player.Cards.Length > 0)
             {
-                PlayerCards += " + " + card.Name;
+                Player.Cards += " + " + card.Name;
             }
             else
             {
-                PlayerCards += card.Name;
+                Player.Cards += card.Name;
             }
         }
 
         private void UpdatePlayerScoreAndGameStatus(Card card)
         {
-            PlayerScore += card.Value;
-            PlayerAlternateScore += card.AlternateValue;
-            if (PlayerScore == 21 || PlayerAlternateScore == 21)
+            Player.Score += card.Value;
+            Player.AlternateScore += card.AlternateValue;
+            if (Player.Score == 21 || Player.AlternateScore == 21)
             {
                 BlackJack();
             }
 
-            if (PlayerScore > 21 && PlayerAlternateScore > 21)
+            if (Player.Score > 21 && Player.AlternateScore > 21)
             {
                 Bust();
             }
         }
 
+        private void UpdateDealerScoreAndGameStatus(Card card)
+        {
+            Dealer.Score += card.Value;
+            Dealer.AlternateScore += card.AlternateValue;
+            if (Dealer.Score == 21 || Dealer.AlternateScore == 21)
+            {
+                DealerWins();
+            }
+        }
+
         private void NotifyOfChangesToGameUI()
         {
-            OnPropertyChanged(nameof(PlayerScore));
             OnPropertyChanged(nameof(GameOver));
-            OnPropertyChanged(nameof(PlayerStatus));
-            OnPropertyChanged(nameof(PlayerCards));
-            OnPropertyChanged(nameof(PlayerAlternateScore));
+            OnPropertyChanged(nameof(GameStatus));
+            OnPropertyChanged(nameof(Player));
+            OnPropertyChanged(nameof(Dealer));
         }
 
         private void Bust()
         {
-            PlayerStatus = "BUST!";
+            GameStatus = "BUST!";
             GameOver = true;
         }
 
         private void BlackJack()
         {
-            PlayerStatus = "BLACKJACK!";
+            GameStatus = "BLACKJACK!";
             GameOver = true;
+        }
+
+        private void DealerWins()
+        {
+            GameStatus = "DEALER WINS!";
+            GameOver = true;
+        }
+
+        private void DealerPlay()
+        {
+            if (Dealer.Score == 21 || Dealer.AlternateScore == 21)
+            {
+                
+            }
         }
     }
 }
