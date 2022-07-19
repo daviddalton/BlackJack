@@ -48,7 +48,7 @@
         </StackLayout>
         <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="32, 64, 32, 32">
             <Button Text="Hit!" Command="{Binding HitCommand}" BackgroundColor="Gray" TextColor="White"></Button>
-            <Button Text="Stay" BackgroundColor="Gray" TextColor="White"></Button>
+            <Button Text="Stay" Command="{Binding PlayerStayed}" BackgroundColor="Gray" TextColor="White"></Button>
             <Button Text="Reset" Command="{Binding ResetCommand}"></Button>
         </StackLayout>
     </StackLayout>

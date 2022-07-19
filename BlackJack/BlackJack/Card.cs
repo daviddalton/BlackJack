@@ -14,5 +14,10 @@ namespace BlackJack
             Value = value;
             AlternateValue = alternateValue;
         }
+
+        public void UseCard()
+        {
+            UsesRemaining -= 1;
+        }
     }
 }
