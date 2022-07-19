@@ -51,10 +51,6 @@ namespace BlackJack
             if (player.Score == 21 || player.AlternateScore == 21)
             {
                 BlackJack();
-                if (timer != null)
-                {
-                    timer.Dispose();
-                }
             }
             if (player.Score > 21 && player.AlternateScore > 21)
             {

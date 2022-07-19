@@ -56,10 +56,7 @@ namespace BlackJack
         void PlayerStayed_Execute()
         {
             Player.Stayed = true;
-            DealCardToDealer();
-
-            NotifyOfChangesToGameUI();
-
+            
             DealersTurn();
         }
 
